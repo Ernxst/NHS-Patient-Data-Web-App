@@ -1,3 +1,505 @@
-.clearBoth {
-  clear: both;
+/*
+Some stylings based on tutorials from W3Schools
+https://www.w3schools.com/css/default.asp
+*/
+
+.footer {
+    left: 0;
+    bottom: 0;
+    color: white;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+}
+
+.footer span {
+    background-color: #86BBD8;
+    padding: 8px 8px;
+    border-top: 4px solid #3066BE;
+    margin-right: 8px;
+}
+
+.ui {
+    background-color: #3066BE;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-top: 4px solid #86BBD8;
+    -webkit-box-shadow: 0 6px 4px -4px black;
+    -moz-box-shadow: 0 6px 4px -4px black;
+    box-shadow: 0 5px 4px -4px black;
+}
+
+.ui .item {
+    color: #fff;
+    padding: 16px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.1em;
+    /* width: 7%; */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ui .ui_title {
+    width: 290px;
+    margin-left: 16px;
+    display: inline-block;
+    font-size: 1.4em;
+    cursor: default;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ui .item:hover {
+    background-color: #30C5FF !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.ui .item.active, .ui .item:active, .ui .item:target, .ui .item:focus, .ui .item:visited {
+    background-color: #86BBD8;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.ui > input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.lbl {
+    cursor: pointer;
+    width: 2%;
+    background: #2A2D34;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+}
+
+.lbl:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 35%;
+    height: 90%;
+    background: #fff;
+    border-radius: 27px;
+    transition: 0.3s;
+}
+
+.ui > input:checked + .lbl {
+    background: #30C5FF;
+}
+
+.ui > input:checked + .lbl:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+}
+
+.lbl:active:after {
+    width: 65%;
+}
+
+.main {
+    padding-bottom: 3.5em;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+h1 span {
+    background-color: #3066BE;
+    padding: 16px 16px;
+}
+
+body {
+    font-family: Verdana, serif;
+    font-size: 100%;
+    padding-top: 4.25em;
+    color: black;
+    background-color: white;
+}
+
+.dark-mode {
+    background-color: #2A2D34;
+    color: white;
+}
+
+h2 {
+    color: white;
+    background-color: #3066BE;
+    padding: 8px 8px;
+    text-align: left;
+    font-size: 1.5em;
+    width: 50%;
+}
+
+h3 {
+    color: #86BBD8;
+    text-align: left;
+    font-size: 1.25em;
+    margin-left: 1em;
+}
+
+p {
+    margin-left: 1.6em;
+    font-size: 1em;
+}
+
+p.hp {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.centred {
+    padding-top: 0.5em;
+    padding-bottom: 3.5em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Adapted from tutorials from W3Schools */
+.centred .btn-group {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.centred .btn-group .button {
+    float: none;
+}
+
+form .btn-group {
+    padding-top: 16px;
+    display: inline-flex;
+    width: 100%;
+}
+
+form .bounds-btn-group {
+    display: inline-flex;
+    width: 50%;
+    margin-left: -16px;
+}
+
+.btn-group {
+    display: inline-flex;
+    width: 50%;
+}
+
+.button, input[type=submit], .btn-group label {
+    background-color: #3066BE;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    float: left;
+    transition-duration: 0.4s;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 23%;
+}
+
+.button:hover, input[type=submit]:hover, .btn-group label:hover {
+    background-color: #30C5FF;
+}
+
+.button span, input[type=submit] span, .btn-group label span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after, input[type=submit] span:after, .btn-group label span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span, input[type=submit]:hover span, .btn-group label:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after, input[type=submit]:hover span:after, .btn-group label:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+input[type=text] {
+    width: 15%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 35%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type=file] {
+    display: none;
+    /*
+      background-color: #3066BE;
+      color: white;
+      border: none;
+      padding: 1em 2em;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1em;
+      float: left;
+      transition-duration: 0.4s;
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+     */
+}
+
+input[type=file]:hover {
+    background-color: #30C5FF;
+    color: white;
+}
+
+label {
+    background-color: #3066BE;
+    color: white;
+    padding: 12px 12px;
+    text-align: right;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-left: 2em;
+    margin-right: 1.5em;
+}
+
+.container {
+    padding: 1em 1em 3em;
+    display: flex;
+    width: 40%;
+}
+
+.container label {
+    flex: 1;
+}
+
+.custom-checkbox {
+    vertical-align: middle;
+    background-color: transparent;
+    display: block;
+    flex: 0;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.dropdown {
+    display: inline-flex;
+    margin-right: -8px;
+    text-align: center;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.dropdown select {
+    padding: 16px 16px;
+    background-color: #3066BE;
+    color: white;
+    text-decoration: none;
+    width: 90%;
+}
+
+.dropdown option {
+    background-color: #30C5FF;
+    font-size: 1.25em;
+    box-shadow: inset 20px 20px;
+}
+
+.dropdown option:hover {
+    background-color: #86BBD8;
+    box-shadow: inset 20px 20px
+}
+
+.dropdown option:active {
+    background-color: #86BBD8;
+    box-shadow: inset 20px 20px;
+}
+
+.grid, .analytics-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 16px;
+    padding: 16px;
+    text-align: center;
+}
+
+.analytics-grid {
+    grid-template-columns: auto auto auto;
+}
+
+.cell, .large-cell, .small-cell {
+    outline: 1px solid black;
+    grid-row: span 3;
+}
+
+.small-cell {
+    grid-row: span 1;
+}
+
+.large-cell {
+    grid-row: span 3;
+}
+
+.column {
+    background-color: #86BBD8;
+    color: white;
+    font-size: 1.4em;
+    padding: 8px 8px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 16px - 1.75em);
+}
+
+.cell-column {
+    padding: 16px 0 16px 0;
+    flex: 1 0 25%;
+    position: relative;
+}
+
+.cell-column .custom-header {
+    display: block;
+    font-size: 0.72em;
+}
+
+.cell-column .custom-value {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.cell-column:hover {
+    background-color: #30C5FF;
+    color: white;
+}
+
+.cell input[type=text] {
+    width: 100%;
+    border: 0 none;
+    box-shadow: none;
+    font-size: 1em;
+    padding: 16px 16px;
+    text-align: center;
+    border-radius: 0;
+}
+
+.cell input[type=text]:focus {
+    outline-color: #3066BE;
+}
+
+.cell-column .hidden-input, .cell-column form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.c-list {
+    margin-left: 8px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+.c-list .group, details {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    outline: 0;
+    margin: 8px 8px;
+    font-size: 1.25em;
+    line-height: 2em;
+    width: 10%;
+    background-color: #3066BE;
+    font-weight: bold;
+    padding: 8px 8em 8px 10px;
+}
+
+summary:hover {
+    background-color: #86BBD8;
+}
+
+summary:after {
+    margin-right: 16px;
+    margin-left: 8px;
+    float: left;
+    content: "\f125";
+    font-family: "ionicons", serif;
+    transition: 0.35s;
+}
+
+details[open] summary:after {
+    transition: 0.35s;
+    transform: rotate(90deg);
+}
+
+.c-list .members, details[open] {
+    display: block;
+}
+
+.c-list .member {
+    color: white;
+    position: relative;
+    display: flex;
+    margin: 4px 0 4px 32px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.c-list .member span {
+    background-color: #30C5FF;
+    padding: 8px 8px;
+    border-right: 5px solid #306BBE;
+}
+
+.c-list .member:hover span {
+    background-color: #86BBD8;
+    border-right: 5px solid #30C5FF;
 }

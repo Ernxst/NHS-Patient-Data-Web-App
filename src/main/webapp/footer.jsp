@@ -1,4 +1,3 @@
-<div class="links">
-  <p>The footer</p>
-  <div class="clearBoth"></div>
+<div class="footer">
+  <p><span>By Ernest Nkansah-Badu | SN: 19011939</span></p>
 </div>
